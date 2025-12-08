@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Amrina Altaf - Full-Stack Web Developer, Node.js + Next.js Engineer & AI Calling Agent Developer with 6+ years of experience">
+    <title>Amrina Altaf | Full-Stack Developer & AI Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-white dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#home"
+                        class="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                        Amrina Altaf
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden text-gray-700"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile"
+                        class="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-moon dark:hidden text-gray-700"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#services" class="mobile-nav-link">Services</a>
+                <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Animated Background -->
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-purple-50 to-cyan-50 dark:from-slate-900 dark:via-purple-900/20 dark:to-slate-900">
+        </div>
+        <div class="absolute inset-0 hero-pattern opacity-10"></div>
+
+        <!-- Floating Elements -->
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 animate-blob">
+        </div>
+        <div
+            class="absolute top-40 right-10 w-72 h-72 bg-cyan-300 dark:bg-cyan-600 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-300 dark:bg-indigo-600 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-xl opacity-30 animate-blob animation-delay-4000">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="text-center md:text-left fade-in">
+                    <div class="inline-block mb-4">
+                        <span
+                            class="px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-full text-sm font-semibold text-primary dark:text-purple-400 border border-primary/20">
+                            👋 Welcome to my portfolio
+                        </span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                        Hi, I'm <span
+                            class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Amrina
+                            Altaf</span>
+                    </h1>
+
+                    <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-gray-700 dark:text-gray-300">
+                        <span class="typing-text">Frontend Developer · Full-Stack Engineer · AI Calling Agent
+                            Developer</span>
+                    </h2>
+
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+                        Passionate about crafting exceptional digital experiences with modern web technologies.
+                        Specializing in Node.js, Next.js, and cutting-edge AI calling agent solutions.
+                        Transforming ideas into powerful, scalable applications.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contact" class="btn-primary group">
+                            <span>Hire Me</span>
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#projects" class="btn-secondary group">
+                            <span>View Projects</span>
+                            <i class="fas fa-briefcase ml-2 group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4 mt-8 justify-center md:justify-start">
+                        <a href="https://www.instagram.com/amrina_119/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100082538137025" target="_blank"
+                            class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="mailto:amrinakhan40@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/923061602959" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content - Profile Image -->
+                <div class="flex justify-center md:justify-end fade-in animation-delay-300">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30 animate-pulse">
+                        </div>
+                        <div
+                            class="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                            <img src="images/profile.avif" alt="Amrina Altaf - Full-Stack Developer"
+                                class="w-full h-full object-cover"
+                                onerror="this.src='https://ui-avatars.com/api/?name=Amrina+Altaf&size=400&background=6366f1&color=fff&bold=true'">
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div
+                            class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full opacity-50 animate-bounce-slow">
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-accent to-cyan-400 rounded-full opacity-30 animate-bounce-slow animation-delay-1000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#skills"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies I work with to build amazing products</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Skill Cards -->
+                <div class="skill-card fade-in-up" style="animation-delay: 0.1s">
+                    <div class="skill-icon bg-orange-500">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.2s">
+                    <div class="skill-icon bg-blue-500">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.3s">
+                    <div class="skill-icon bg-cyan-500">
+                        <i class="fab fa-css3"></i>
+                    </div>
+                    <h3 class="skill-name">Tailwind CSS</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.4s">
+                    <div class="skill-icon bg-yellow-500">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3 class="skill-name">JavaScript ES6+</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.5s">
+                    <div class="skill-icon bg-indigo-500">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3 class="skill-name">PHP</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.6s">
+                    <div class="skill-icon bg-green-500">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3 class="skill-name">Node.js</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.7s">
+                    <div class="skill-icon bg-black dark:bg-white">
+                        <i class="fab fa-react text-white dark:text-black"></i>
+                    </div>
+                    <h3 class="skill-name">Next.js</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.8s">
+                    <div class="skill-icon bg-purple-500">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-name">API Development</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 0.9s">
+                    <div class="skill-icon bg-gradient-to-r from-primary to-secondary">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="skill-name">Full-Stack Dev</h3>
+                </div>
+
+                <div class="skill-card fade-in-up" style="animation-delay: 1s">
+                    <div class="skill-icon bg-gradient-to-r from-accent to-cyan-400">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="skill-name">AI Call Agents</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing my best work and recent accomplishments</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1: Quran Class Join -->
+                <div class="project-card fade-in-up">
+                    <div class="project-image-container">
+                        <img src="images/quran-class.jpg" alt="Quran Class Join Platform" class="project-image"
+                            onerror="this.src='https://via.placeholder.com/600x400/10b981/ffffff?text=Quran+Class+Join'">
+                        <div class="project-overlay">
+                            <a href="https://quranclassjoin.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Quran Class Join</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A comprehensive Islamic education platform connecting students with qualified Quran
+                            teachers.
+                            Features include live classes, progress tracking, and interactive learning tools.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <a href="https://quranclassjoin.com/" target="_blank"
+                            class="btn-secondary inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: DevAspire -->
+                <div class="project-card fade-in-up animation-delay-300">
+                    <div class="project-image-container">
+                        <img src="images/devaspire.jpg" alt="DevAspire Web Development" class="project-image"
+                            onerror="this.src='https://via.placeholder.com/600x400/6366f1/ffffff?text=DevAspire'">
+                        <div class="project-overlay">
+                            <a href="https://devaspire.com/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">DevAspire</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Modern web development agency platform showcasing services, portfolio, and client
+                            testimonials.
+                            Built with cutting-edge technologies for optimal performance and user experience.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <a href="https://devaspire.com/" target="_blank" class="btn-secondary inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about"
+        class="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-cyan-50 dark:from-slate-800/50 dark:via-purple-900/20 dark:to-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my journey and expertise</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <h3 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+                        Building Digital Excellence for <span
+                            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">6+
+                            Years</span>
+                    </h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                        I'm a passionate Full-Stack Web Developer with extensive experience in creating robust,
+                        scalable applications. My expertise spans across modern web technologies, with a special
+                        focus on Node.js, Next.js, and AI-powered solutions.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                        Over the years, I've successfully delivered <strong class="text-primary">30+ mobile
+                            applications</strong>
+                        and <strong class="text-secondary">40+ web applications</strong> for clients worldwide.
+                        I specialize in AI calling agent development and automation, helping businesses streamline
+                        their operations and enhance customer experiences.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">
+                        Working with international clients has given me a global perspective on technology and
+                        business needs. I'm committed to delivering high-quality solutions that exceed expectations
+                        and drive real business value.
+                    </p>
+                </div>
+
+                <div class="fade-in-up animation-delay-300">
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="stat-card">
+                            <div class="stat-icon bg-gradient-to-br from-primary to-secondary">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-gradient-to-br from-green-500 to-emerald-500">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Mobile Apps</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-gradient-to-br from-accent to-cyan-400">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="stat-number">40+</div>
+                            <div class="stat-label">Web Apps</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-gradient-to-br from-purple-500 to-pink-500">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title">Services I Offer</h2>
+                <p class="section-subtitle">Comprehensive solutions tailored to your business needs</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card fade-in-up">
+                    <div class="service-icon bg-gradient-to-br from-blue-500 to-cyan-500">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">
+                        Custom website development using modern technologies. Responsive, fast, and SEO-optimized
+                        solutions that drive results.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card fade-in-up animation-delay-200">
+                    <div class="service-icon bg-gradient-to-br from-purple-500 to-pink-500">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">Frontend Development</h3>
+                    <p class="service-description">
+                        Beautiful, interactive user interfaces with React, Next.js, and modern CSS frameworks.
+                        Pixel-perfect implementations.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card fade-in-up animation-delay-400">
+                    <div class="service-icon bg-gradient-to-br from-green-500 to-emerald-500">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="service-title">Full-Stack Web Apps</h3>
+                    <p class="service-description">
+                        End-to-end application development with Node.js, databases, and cloud deployment.
+                        Scalable and secure solutions.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card fade-in-up animation-delay-600">
+                    <div class="service-icon bg-gradient-to-br from-indigo-500 to-purple-500">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="service-title">AI Calling Agent Setup</h3>
+                    <p class="service-description">
+                        Intelligent AI-powered calling agents for customer service, sales, and support.
+                        Automate and enhance communication.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card fade-in-up animation-delay-800">
+                    <div class="service-icon bg-gradient-to-br from-orange-500 to-red-500">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="service-title">Automation & Integrations</h3>
+                    <p class="service-description">
+                        Streamline workflows with custom automation solutions and third-party API integrations.
+                        Save time and resources.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card fade-in-up animation-delay-1000">
+                    <div class="service-icon bg-gradient-to-br from-cyan-500 to-blue-500">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Dashboard Development</h3>
+                    <p class="service-description">
+                        Custom admin panels and analytics dashboards. Real-time data visualization and
+                        management interfaces.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50 dark:bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What clients say about working with me</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card fade-in-up">
+                    <div class="flex items-center mb-4">
+                        <img src="images/client1.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4"
+                            onerror="this.src='https://ui-avatars.com/api/?name=John+Smith&size=64&background=6366f1&color=fff'">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">John Smith</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">CEO, Tech Solutions</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        "Amrina delivered an exceptional web application that exceeded our expectations.
+                        Her expertise in Next.js and attention to detail made the entire process smooth and efficient."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card fade-in-up animation-delay-300">
+                    <div class="flex items-center mb-4">
+                        <img src="images/client2.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Sarah+Johnson&size=64&background=8b5cf6&color=fff'">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Founder, EduTech</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        "Working with Amrina was a game-changer for our business. The AI calling agent she developed
+                        has significantly improved our customer engagement and reduced response times."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card fade-in-up animation-delay-600">
+                    <div class="flex items-center mb-4">
+                        <img src="images/client3.jpg" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Michael+Chen&size=64&background=06b6d4&color=fff'">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Michael Chen</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">CTO, StartupHub</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        "Highly professional and skilled developer. Amrina's full-stack expertise helped us launch
+                        our platform ahead of schedule. Excellent communication throughout the project."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss your next project</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="fade-in-up">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your
+                                Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                        </div>
+
+                        <div>
+                            <label for="email"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your
+                                Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                        </div>
+
+                        <div>
+                            <label for="message"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your
+                                Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="fade-in-up animation-delay-300">
+                    <div class="space-y-6">
+                        <div class="contact-info-card">
+                            <div class="contact-icon bg-gradient-to-br from-primary to-secondary">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
+                                <a href="mailto:amrinakhan40@gmail.com"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    amrinakhan40@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon bg-gradient-to-br from-green-500 to-emerald-500">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">WhatsApp</h4>
+                                <a href="https://wa.me/923061602959" target="_blank"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    +92 306 1602959
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon bg-gradient-to-br from-pink-500 to-rose-500">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Instagram</h4>
+                                <a href="https://www.instagram.com/amrina_119/" target="_blank"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    @amrina_119
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon bg-gradient-to-br from-blue-500 to-cyan-500">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Facebook</h4>
+                                <a href="https://www.facebook.com/profile.php?id=100082538137025" target="_blank"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                                    Amrina Altaf
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Box -->
+                    <div
+                        class="mt-8 p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 border border-primary/20">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Ready to start a project?</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Let's turn your ideas into reality. I'm available for freelance projects and collaborations.
+                        </p>
+                        <a href="https://wa.me/923061602959" target="_blank"
+                            class="btn-primary inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3
+                        class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                        Amrina Altaf
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Full-Stack Web Developer specializing in Node.js, Next.js, and AI Calling Agent Development.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/amrina_119/" target="_blank" class="footer-social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100082538137025" target="_blank"
+                            class="footer-social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="mailto:amrinakhan40@gmail.com" class="footer-social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/923061602959" target="_blank" class="footer-social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a>
+                        </li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            <a href="mailto:amrinakhan40@gmail.com"
+                                class="hover:text-white transition-colors">amrinakhan40@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-green-500"></i>
+                            <a href="https://wa.me/923061602959" target="_blank"
+                                class="hover:text-white transition-colors">+92 306 1602959</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> Amrina Altaf. All rights reserved. Built with ❤️ and modern
+                    web technologies.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
